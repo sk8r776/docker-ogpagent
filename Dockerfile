@@ -12,5 +12,4 @@ EXPOSE 12679/tcp
 EXPOSE 27015/udp 7778/udp
 EXPOSE 32330/tcp
 
-USER ogp_agent
 CMD ["ogpmanager"]
