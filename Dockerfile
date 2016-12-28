@@ -2,8 +2,8 @@ FROM ubuntu:16.04
 
 MAINTAINER joshhsoj1902
 
-RUN apt-get update
-RUN apt-get install -y  subversion \
+RUN apt-get update \
+ && apt-get install -y  subversion \
                         build-essential \
                         screen \
                         rsync \
@@ -34,7 +34,7 @@ RUN mv /usr/local/bin/ogpmanager.sh /usr/local/bin/ogpmanager \
 
 RUN useradd ogp_agent -p password -m \
     && echo 'ogp_agent ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-#RUN svn co svn://svn.code.sf.net/p/hldstart/svn/trunk/agent/ /opt/agent
+
 RUN wget -P ~ https://github.com/OpenGamePanel/OGP-Agent-Linux/archive/master.zip \
   && unzip ~/master.zip -d ~/ \
   && cp -rp ~/OGP-Agent-Linux-master /opt/agent
