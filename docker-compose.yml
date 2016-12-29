@@ -10,3 +10,4 @@ services:
       - "32330:32330/tcp"
     volumes:
       - ./ogp_agent/games:/home/ogp_agent/OGP_User_Files
+      - ./ogp_agent/Cfg:/opt/OGP/Cfg

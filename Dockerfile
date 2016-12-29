@@ -42,7 +42,7 @@ RUN wget -P ~ https://github.com/OpenGamePanel/OGP-Agent-Linux/archive/master.zi
 RUN cd /opt/agent \
   && bash /opt/agent/install.sh install ogp_agent password /opt/OGP/
 
-COPY Cfg /opt/OGP/Cfg
+COPY ogp_agent/Cfg /opt/OGP/Cfg
 
 EXPOSE 12679/tcp
 EXPOSE 27015/udp 7778/udp
