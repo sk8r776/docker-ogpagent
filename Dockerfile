@@ -16,6 +16,7 @@ RUN apt-get update \
                         curl \
                         unzip \
                         lib32gcc1 \
+                        lib32stdc++6 \
                         perl-modules \
                         pure-ftpd \
                         e2fsprogs \
