@@ -5,8 +5,9 @@ services:
     restart: always
     ports:
       - "12679:12679/tcp"
+      - "27015:27015/tcp"
       - "27015:27015/udp"
-      - "7778:7778/udp"
-      - "32330:32330/tcp"
     volumes:
       - ./ogp_agent/games:/home/ogp_agent/OGP_User_Files
+      - ./ogp_agent/Cfg:/opt/OGP/Cfg
+      - ./ogp_agent/stemcmd:/opt/OGP/steamcmd
