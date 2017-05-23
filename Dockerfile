@@ -25,7 +25,7 @@ RUN apt-get update \
                         libio-compress-perl \
                         libfrontier-rpc-perl \
                         pure-ftpd \
-                        e2fsprogs
+                        e2fsprogs \
 
 RUN cpan Frontier::Daemon::Forking Crypt::XXTEA
 
@@ -36,8 +36,8 @@ RUN mv /usr/local/bin/ogpmanager.sh /usr/local/bin/ogpmanager \
 RUN useradd ogp_agent -p password -m \
     && echo 'ogp_agent ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
-RUN wget -P ~ https://github.com/OpenGamePanel/OGP-Agent-Linux/archive/master.zip \
-  && unzip ~/master.zip -d ~/ \
+RUN wget -P ~ https://github.com/OpenGamePanel/OGP-Agent-Linux/archive/2b7e3b729985978a0b268f517652cae579639411.zip \
+  && unzip ~/2b7e3b729985978a0b268f517652cae579639411.zip -d ~/ \
   && cp -rp ~/OGP-Agent-Linux-master /opt/agent
 
 RUN cd /opt/agent \
