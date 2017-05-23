@@ -1,0 +1,13 @@
+version: '2'
+services:
+  agent:
+    image: joshhsoj1902/docker-ogpagent
+    restart: always
+    ports:
+      - "12679:12679/tcp"
+      - "27015:27015/tcp"
+      - "27015:27015/udp"
+    volumes:
+      - ./ogp_agent/games:/home/ogp_agent/OGP_User_Files
+      - ./ogp_agent/Cfg:/opt/OGP/Cfg
+      - ./ogp_agent/stemcmd:/opt/OGP/steamcmd
