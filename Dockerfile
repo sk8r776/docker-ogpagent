@@ -43,7 +43,7 @@ RUN wget -P ~ https://github.com/OpenGamePanel/OGP-Agent-Linux/archive/2b7e3b729
 RUN cd /opt/agent \
   && bash /opt/agent/install.sh install ogp_agent password /opt/OGP/
 
-COPY Cfg /opt/OGP/Cfg
+COPY ogp_agent/Cfg /opt/OGP/Cfg
 
 # forward logs to docker log collector
 RUN ln -sf /dev/stdout /opt/OGP/ogp_agent.log
