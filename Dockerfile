@@ -38,7 +38,7 @@ RUN useradd ogp_agent -p password -m \
 
 RUN wget -P ~ https://github.com/OpenGamePanel/OGP-Agent-Linux/archive/2b7e3b729985978a0b268f517652cae579639411.zip \
   && unzip ~/2b7e3b729985978a0b268f517652cae579639411.zip -d ~/ \
-  && cp -rp ~/OGP-Agent-Linux-master-2b7e3b729985978a0b268f517652cae579639411 /opt/agent
+  && cp -rp ~/OGP-Agent-Linux-2b7e3b729985978a0b268f517652cae579639411 /opt/agent
 
 RUN cd /opt/agent \
   && bash /opt/agent/install.sh install ogp_agent password /opt/OGP/
