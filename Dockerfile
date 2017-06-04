@@ -46,7 +46,7 @@ RUN cd /opt/agent \
 COPY ogp_agent/Cfg /opt/OGP/Cfg
 
 # forward logs to docker log collector
-RUN ln -sf /dev/stdout /opt/OGP/ogp_agent.log
+# RUN ln -sf /dev/stdout /opt/OGP/ogp_agent.log
 
 EXPOSE 12679/tcp
 EXPOSE 27015/udp 27015/udp
